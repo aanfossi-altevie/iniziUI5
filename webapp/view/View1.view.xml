@@ -1,0 +1,37 @@
+<mvc:View
+    controllerName="sap.btp.sapui5.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    
+    displayBlock="true"
+    xmlns="sap.m"
+>
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}">
+					<content >
+                    <!--<Button type="Reject" text="Non Modificabile dopo l'uscita" enabled="{/btnred/enabled}" id="attiva"/>-->
+                        <Label labelFor="nome" text="Nome" textAlign="Left" vAlign="Middle" width="10%"/>
+                        <Input placeholder ="Nome" id="nome" value="{inpModel>/name}" width="90%"/>
+                        <Label labelFor="cognome" text="Cognome" textAlign="Left" vAlign="Middle" width="10%"/>
+                        <Input placeholder ="Cognome" id="cognome" value="{inpModel>/surname}" width="90%" />
+                        <Label labelFor="DP2" text="Data" textAlign="Left" vAlign="Middle" width="10%"/>
+                        <DatePicker id="DP2" value="{inpModel>/date}" valueFormat="dd-MM-yyyy" displayFormat="short" 
+                        change="handleChange" class="sapUiSmallMarginBottom" width="90%"/>
+                        <Label text="" width ="20%"/>
+                        <Button type="Accept" text="Salva Dati" enabled="true" press="onPress" width="25%"/>
+                        <Label text="" width ="10%"/>
+                        <Button type="Reject" text="Cancella Dati" enabled="true" press="elimina" width="25%"/>
+                        <Label text="" width ="20%"/>
+                        <Label text="Nome" width="10%" />
+                        <Input enabled="false" value="{outModel>/name}" width="90%"/>
+                        <Label text="Cognome" width="10%" />
+                        <Input enabled="false" value="{outModel>/surname}" width="90%"/>
+                        <Label text="Data" width="10%" />
+                        <Input enabled ="false" value="{outModel>/date}" width="90%"/>
+                    </content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
